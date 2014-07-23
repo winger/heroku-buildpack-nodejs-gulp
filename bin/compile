@@ -2,14 +2,9 @@
 
 set -e            # fail fast
 set -o pipefail   # don't ignore exit codes when piping output
-# set -x          # enable debugging
 
 # Configure directories
-build_dir=$1
-cache_dir=$2
-env_dir=$3
-
-bp_dir=$(cd $(dirname $0); cd ..; pwd)
+BUILD_DIR=$1
 
 export PATH="$BUILD_DIR/vendor/node/bin:$BUILD_DIR/bin:$BUILD_DIR/node_modules/.bin:$PATH"
 
@@ -19,4 +14,4 @@ source $bp_dir/bin/common.sh
 # Check and run gulp
 status "Found gulpfile, running gulp heroku task"
 cd $build_dir
-node_modules/.bin/gulp heroku
+gulp heroku
