@@ -22,6 +22,6 @@ source $bp_dir/bin/common.sh
     export_env_dir $env_dir
   fi
 
-  status "Found gulpfile, running gulp heroku:$NODE_ENV task"
-  $build_dir/node_modules/.bin/gulp heroku:$NODE_ENV
+  status "Found gulpfile, running gulp heroku task"
+  $build_dir/node_modules/.bin/gulp heroku
 )
