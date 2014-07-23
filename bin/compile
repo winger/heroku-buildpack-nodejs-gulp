@@ -16,12 +16,6 @@ source $bp_dir/bin/common.sh
 
 # Check and run gulp
 (
-  # get the env vars
-  if [ -d "$env_dir" ]; then
-    status "Exporting config vars to environment"
-    export_env_dir $env_dir
-  fi
-
   status "Found gulpfile, running gulp heroku task"
   $build_dir/node_modules/.bin/gulp heroku
 )
