@@ -13,5 +13,5 @@ source $bp_dir/bin/common.sh
 
 # Check and run gulp
 status "Found gulpfile, running gulp heroku task"
-cd $build_dir
+cd $BUILD_DIR
 gulp heroku
