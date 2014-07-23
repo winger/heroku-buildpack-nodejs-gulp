@@ -11,6 +11,8 @@ env_dir=$3
 
 bp_dir=$(cd $(dirname $0); cd ..; pwd)
 
+export PATH="$BUILD_DIR/vendor/node/bin:$BUILD_DIR/bin:$BUILD_DIR/node_modules/.bin:$PATH"
+
 # Load some convenience functions like status(), echo(), and indent()
 source $bp_dir/bin/common.sh
 
