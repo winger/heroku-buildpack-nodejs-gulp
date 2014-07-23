@@ -8,6 +8,11 @@ BUILD_DIR=$1
 
 export PATH="$BUILD_DIR/vendor/node/bin:$BUILD_DIR/bin:$BUILD_DIR/node_modules/.bin:$PATH"
 
+bp_dir=$(cd $(dirname $0); cd ..; pwd)
+
+# Load some convenience functions like status(), echo(), and indent()
+source $bp_dir/bin/common.sh
+
 # Check and run gulp
 status "Found gulpfile, running gulp heroku task"
 cd $BUILD_DIR
